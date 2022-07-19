@@ -1,24 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import { Box, styled } from '@mui/material';
+import Account from './components/body/Account';
+import TopBar from './components/header/Topbar';
+import Footer from './components/footer/Footer';
+
+const StyledBox = styled(Box)({
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "center",
+  width: "100%",
+})
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <StyledBox>
+      <TopBar />
+      <Account />
+      <Footer />
+    </StyledBox>
   );
 }
 
